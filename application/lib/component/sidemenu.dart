@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
 
-class Buyticket extends StatefulWidget {
-  const Buyticket({Key? key}) : super(key: key);
+class SideMenu extends StatefulWidget {
+  const SideMenu({Key? key}) : super(key: key);
 
   @override
-  _BuyticketState createState() => _BuyticketState();
+  _SideMenuState createState() => _SideMenuState();
 }
 
-class _BuyticketState extends State<Buyticket> {
+class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green[800],
-        title: Text("GREENBUS", style: TextStyle(fontFamily: 'BRITANIC')),
-        centerTitle: true,
-      ),
-      drawer: Drawer(
+    return Drawer(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: ListView(
-          padding: const EdgeInsets.all(8.0),
-          children: [
+          children: <Widget>[
             ListTile(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
